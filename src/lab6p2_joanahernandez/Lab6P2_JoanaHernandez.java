@@ -89,11 +89,11 @@ public class Lab6P2_JoanaHernandez {
         
     } //fin tablas
     
-    public static void triangulo () {
+    public static void triangulo() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese tamano");
+        System.out.println("Ingrese tamano:");
         int tam = sc.nextInt();
-        int [][] piramide = new int [tam][tam];
+        int[][] piramide = new int[tam][tam];
         
         for (int i = 0; i < tam; i++) {
             for (int j = 0; j <= i; j++) {
@@ -104,13 +104,17 @@ public class Lab6P2_JoanaHernandez {
                 }
             }
         }
-
         
         System.out.println("Piramide:");
         for (int i = 0; i < tam; i++) {
+            for (int k = 0; k < tam - i - 1; k++) {
+                System.out.print("[ ]");
+            }
             for (int j = 0; j <= i; j++) {
                 System.out.print("[" + piramide[i][j] + "]");
+                System.out.print("[ ]"); 
             }
+            
             System.out.println();
         }
     }//fin triangulo
